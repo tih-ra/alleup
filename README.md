@@ -36,14 +36,15 @@ Example:
 	}
 	
 2. **Now you can use Alleup**
+  
+  ```javascript
+  var  Alleup = require('alleup');
+  var alleup = new Alleup({storage : "aws", config_file: "path_to_alleup_config.json"})
 
-    ```javascript
-    var  Alleup = require('alleup');
-    var alleup = new Alleup({storage : "aws", config_file: "path_to_alleup_config.json"})
+  You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` for store files in filesystem
 
-You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` for store files in filesystem
+3. **Upload example:**
 
- **Upload example**
 
     ```javascript
     app.post('/upload',  function(req, res) {
@@ -54,8 +55,6 @@ You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` fo
           res.end();
       });
     });
-
-
 
 ### Contribution
 **Pull requests are welcome!!!**

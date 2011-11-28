@@ -1,0 +1,96 @@
+<h1 id="alleup">Alleup</h1>
+
+<p>Flexible way to resize and upload images to Amazon S3 or file system storages for Node.js. Possible  to add different versions of the same file in cropped or resized variant.</p>
+
+<h2 id="installation">Installation</h2>
+
+<pre><code>$ npm install alleup
+</code></pre>
+
+<h2 id="quickstart">Quick Start</h2>
+
+<ol>
+<li><p><strong>You need to create alleup configuration file with image variants and your storages</strong>
+Example:</p>
+
+<p>&#8220;`javascript
+{
+    &#8220;variants&#8221;: {
+        &#8220;resize&#8221;: {
+            &#8220;mini&#8221; : &#8220;300x200&#8221;,
+            &#8220;preview&#8221;: &#8220;800x600&#8221;
+        },
+        &#8220;crop&#8221;: {
+            &#8220;thumb&#8221;: &#8220;200x200&#8221;
+        }
+    },</p>
+
+<pre><code>"storage": {
+    "aws": {
+        "key" : "AWS_KEY",
+        "secret" : "AWS_SECRET",
+        "bucket" : "AWS_BUCKET"
+    },
+    "dir": {
+        "path" : "./public/images/" 
+    }
+}
+</code></pre>
+
+<p>}</p></li>
+<li><p><strong>Now you can use Alleup</strong></p>
+
+<p>&#8220;`javascript
+  var  Alleup = require(&#8216;alleup&#8217;);
+  var alleup = new Alleup({storage : &#8220;aws&#8221;, config_file: &#8220;path_to_alleup_config.json&#8221;})</p></li>
+</ol>
+
+<p>You can use <code>storage: 'aws'</code> for store files on Amazon S3 or <code>storage: 'dir'</code> for store files in filesystem</p>
+
+<p><strong>Upload example:</strong></p>
+
+<pre><code>```javascript
+app.post('/upload',  function(req, res) {
+  alleup.upload(req, res, function(err, file, res){
+
+      console.log("FILE UPLOADED: " + file);
+      // THIS YOU CAN SAVE FILE TO DATABASE FOR EXAMPLE
+      res.end();
+  });
+});
+</code></pre>
+
+<h3 id="contribution">Contribution</h3>
+
+<p><strong>Pull requests are welcome!!!</strong></p>
+
+<h3 id="license">License</h3>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2011 Andriy Bazyuta &lt;andriy.bazyuta@gmail.com&gt;</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+&#8216;Software&#8217;), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &#8216;AS IS&#8217;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+<hr />
+
+<h3 id="author">Author</h3>
+
+<p>Andriy Bazyuta</p>

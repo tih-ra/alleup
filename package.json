@@ -1,0 +1,21 @@
+{
+  "author": "Andriy Bazuta <andriy.bazyuta@gmail.com> (http://andriy.bazyuta.me)",
+  "name": "alleup",
+  "description": "Flexible way to resize and upload images to Amazon S3 or file system storages",
+  "version": "0.0.1",
+  "keywords": ["upload", "image", "imagemagick", "amazon", "aws", "s3", "resize", "file"],
+  "homepage": "http://todo",
+  "repository": {
+    "type": "git",
+    "url": "git://todo"
+  },
+  "engines": {
+    "node": "~0.4.11"
+  },
+  "dependencies": {
+    "formidable": "~1.0.7",
+    "imagemagick": "~0.1.2",
+    "knox": "~0.0.9"  
+  },
+  "devDependencies": {}
+}

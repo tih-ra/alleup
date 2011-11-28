@@ -9,6 +9,7 @@ Flexible way to resize and upload images to Amazon S3 or file system storages fo
 ## Quick Start
 
 1. **You need to create alleup configuration file with image variants and your storages**
+
 Example:
 
     ```javascript
@@ -44,6 +45,7 @@ Example:
 You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` for store files in filesystem
 
 **Upload example**
+
     ```javascript
     app.post('/upload',  function(req, res) {
 	  alleup.upload(req, res, function(err, file, res){
@@ -55,6 +57,7 @@ You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` fo
     });
 
 **Get file url example**
+
     ```javascript
     alleup.url(file, variant)
 `file` - The name of the file you uploaded, saved for example in database (`345621345.jpg`), `variant` - one of your image variants names from alleup_congig.json
@@ -69,7 +72,8 @@ You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` fo
     };
 
 ### Contribution
-Pull requests are welcome!!!
+**Pull requests are welcome!!!**
+
 ### License
 (The MIT License)
 

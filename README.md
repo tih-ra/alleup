@@ -46,16 +46,15 @@ You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` fo
 
  **Upload example**
 
- ```javascript
-  app.post('/upload',  function(req, res) {
-	alleup.upload(req, res, function(err, file, res){
+	```javascript
+	app.post('/upload',  function(req, res) {
+		alleup.upload(req, res, function(err, file, res){
 
-		console.log("FILE UPLOADED: " + file);
-		// THIS YOU CAN SAVE FILE TO DATABASE FOR EXAMPLE
-		res.end();
-	});
-  });
-
+			console.log("FILE UPLOADED: " + file);
+			// THIS YOU CAN SAVE FILE TO DATABASE FOR EXAMPLE
+			res.end();
+			});
+		});
 
  **Get file url example**
 
@@ -63,6 +62,7 @@ You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` fo
   alleup.url(file, variant)
 
 `file` - The name of the file you uploaded, saved for example in database (`345621345.jpg`), `variant` - one of your image variants names from alleup_congig.json
+
 
  **Remove uploaded file example**
 
@@ -73,6 +73,7 @@ You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` fo
 		res.end();
 	 });
     };
+
 
 ### Contribution
 **Pull requests are welcome!!!**

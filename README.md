@@ -42,8 +42,10 @@ Example:
     var alleup = new Alleup({storage : "aws", config_file: "path_to_alleup_config.json"})
 	
   You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` for store files in filesystem
+
+## UPLOAD, URL and DELETE
 	
-3. **Upload example:**
+1. **Upload example:**
 	
     ```javascript
     app.post('/upload',  function(req, res) {

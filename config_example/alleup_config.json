@@ -1,0 +1,22 @@
+{
+	"variants": {
+		"resize": {
+			"version1" : "200x200",
+			"version2": "800x600"
+		},
+		"crop": {
+			"thumb": "200x200"
+		}
+	},
+	
+	"storage": {
+		"aws": {
+			"key" : "AWS_KEY",
+			"secret" : "AWS_SECRET",
+			"bucket" : "AWS_BUCKET"
+		},
+		"dir": {
+			"path" : "./images/"
+		}
+	}
+}

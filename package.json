@@ -4,10 +4,10 @@
   "description": "Flexible way to resize and upload images to Amazon S3 or file system storages",
   "version": "0.0.1",
   "keywords": ["upload", "image", "imagemagick", "amazon", "aws", "s3", "resize", "file"],
-  "homepage": "http://todo",
+  "homepage": "https://github.com/tih-ra/alleup",
   "repository": {
     "type": "git",
-    "url": "git://todo"
+    "url": "git://github.com/tih-ra/alleup.git"
   },
   "engines": {
     "node": "~0.4.11"

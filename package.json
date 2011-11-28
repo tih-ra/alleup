@@ -2,7 +2,7 @@
   "author": "Andriy Bazuta <andriy.bazyuta@gmail.com> (http://andriy.bazyuta.me)",
   "name": "alleup",
   "description": "Flexible way to resize and upload images to Amazon S3 or file system storages",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": ["upload", "image", "imagemagick", "amazon", "aws", "s3", "resize", "file"],
   "homepage": "https://github.com/tih-ra/alleup",
   "repository": {
@@ -10,7 +10,7 @@
     "url": "git://github.com/tih-ra/alleup.git"
   },
   "engines": {
-    "node": "~0.4.11"
+    "node": ">= 0.4.1 < 0.7.0"
   },
   "dependencies": {
     "formidable": "~1.0.7",

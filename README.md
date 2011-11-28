@@ -67,6 +67,11 @@ Example:
           res.end();
       });
     });
+
+3. **Get file url example:**
+
+    ```javascript
+    alleup.url(file, variant);
 	
 ### Contribution
 **Pull requests are welcome!!!**

@@ -57,14 +57,13 @@ Example:
       });
     });
 
-2. **Url example:**
+2. **Remove uploaded file example:**
 
     ```javascript
-    app.post('/upload',  function(req, res) {
-      alleup.upload(req, res, function(err, file, res){
+    app.get('/delete',  function(req, res) {
+      alleup.remove('1322506647.jpg', function(err) {
 
-          console.log("FILE UPLOADED: " + file);
-          // THIS YOU CAN SAVE FILE TO DATABASE FOR EXAMPLE
+          // THIS YOU CAN DELETE FILE FROM DATABASE FOR EXAMPLE
           res.end();
       });
     });

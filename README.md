@@ -43,13 +43,6 @@ Example:
 
 You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` for store files in filesystem
 
-2. **Now you can use Alleup**
-
-    ```javascript
-    var  Alleup = require('alleup');
-    var alleup = new Alleup({storage : "aws", config_file: "path_to_alleup_config.json"})
-
-You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` for store files in filesystem
 
  **Upload example**
 

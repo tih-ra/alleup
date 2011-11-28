@@ -46,14 +46,8 @@ You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` fo
 **Upload example**
 
     ```javascript
-    app.post('/upload',  function(req, res) {
-	  alleup.upload(req, res, function(err, file, res){
-
-		console.log("FILE UPLOADED: " + file);
-		// THIS YOU CAN SAVE FILE TO DATABASE FOR EXAMPLE
-		res.end();
-	  });
-    });
+    var  Alleup = require('alleup');
+    var alleup = new Alleup({storage : "aws", config_file: "path_to_alleup_config.json"})
 
 **Get file url example**
 

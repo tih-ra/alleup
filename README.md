@@ -43,20 +43,34 @@ Example:
 
 You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` for store files in filesystem
 
-**Upload example**
+2. **Now you can use Alleup**
 
     ```javascript
     var  Alleup = require('alleup');
     var alleup = new Alleup({storage : "aws", config_file: "path_to_alleup_config.json"})
 
-**Get file url example**
+You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` for store files in filesystem
+
+ **Upload example**
+
+ ```javascript
+    app.post('/upload',  function(req, res) {
+	  alleup.upload(req, res, function(err, file, res){
+
+		console.log("FILE UPLOADED: " + file);
+		// THIS YOU CAN SAVE FILE TO DATABASE FOR EXAMPLE
+		res.end();
+	  });
+    });
+
+ **Get file url example**
 
     ```javascript
 	alleup.url(file, variant)
 
 `file` - The name of the file you uploaded, saved for example in database (`345621345.jpg`), `variant` - one of your image variants names from alleup_congig.json
 
-**Remove uploaded file example**
+ **Remove uploaded file example**
 
     ```javascript
     app.get('/delete',  function(req, res) {

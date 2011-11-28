@@ -43,7 +43,7 @@ Example:
 	
   You can use `storage: 'aws'` for store files on Amazon S3 or `storage: 'dir'` for store files in filesystem
 	
-**Upload example:**
+3. **Upload example:**
 	
     ```javascript
     app.post('/upload',  function(req, res) {

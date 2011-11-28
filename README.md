@@ -72,6 +72,8 @@ Example:
 
     ```javascript
     alleup.url(file, variant);
+
+`file` - The name of the file you uploaded, saved for example in database (`345621345.jpg`), `variant` - one of your image variants names from alleup_congig.json
 	
 ### Contribution
 **Pull requests are welcome!!!**

@@ -57,6 +57,18 @@ Example:
       });
     });
 
+2. **Url example:**
+
+    ```javascript
+    app.post('/upload',  function(req, res) {
+      alleup.upload(req, res, function(err, file, res){
+
+          console.log("FILE UPLOADED: " + file);
+          // THIS YOU CAN SAVE FILE TO DATABASE FOR EXAMPLE
+          res.end();
+      });
+    });
+	
 ### Contribution
 **Pull requests are welcome!!!**
 

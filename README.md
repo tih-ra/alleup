@@ -9,7 +9,6 @@ Flexible way to resize and upload images to Amazon S3 or file system storages fo
 ## Quick Start
 
 1. **You need to create alleup configuration file with image variants and your storages**
-
 Example:
 
     ```javascript

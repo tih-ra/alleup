@@ -36,7 +36,6 @@ Example:
 	}
 Example config with scopes (only from version 0.1.0):
 
-    ```javascript
     {
 		"variants": {
 			"projects": { //projects is scope

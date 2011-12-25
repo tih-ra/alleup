@@ -34,6 +34,41 @@ Example:
 			}
 		}
 	}
+
+Example config with scopes (only from version 0.1.0):
+
+	```javascript
+	{
+			"variants": {
+				"projects": { //projects is scope
+				  "resize": {
+					  "mini" : "300x200",
+					  "preview": "800x600"
+				  },
+				  "crop": {
+					 "thumb": "200x200"
+				  }
+				},
+				
+				"gallery": { //gallery is scope
+				   "crop": {
+					"thumb": "100x100"
+				   }	
+				}
+			},
+
+			"storage": {
+				"aws": {
+					"key" : "AWS_KEY",
+					"secret" : "AWS_SECRET",
+					"bucket" : "AWS_BUCKET"
+				},
+				"dir": {
+					"path" : "./public/images/" 
+				}
+			}
+		}
+
 	
 2. **Now you can use Alleup**
   
@@ -62,23 +97,42 @@ Example:
     });
     
     app.post('/upload',  function(req, res) {
+	 // Without Scopes
       alleup.upload(req, res, function(err, file, res){
 
           console.log("FILE UPLOADED: " + file);
           // THIS YOU CAN SAVE FILE TO DATABASE FOR EXAMPLE
           res.end();
       });
+
+     //With Scope `projects` (look at example of configuration file)
+     alleup.upload(req, res, function(err, file, res){
+
+         console.log("FILE UPLOADED: " + file);
+         // THIS YOU CAN SAVE FILE TO DATABASE FOR EXAMPLE
+         res.end();
+     }, 'projects');
+     
     });
 
 2. **Remove uploaded file example:**
 
     ```javascript
+    // Without Scopes
     app.get('/delete',  function(req, res) {
       alleup.remove('1322506647.jpg', function(err) {
 
           // THIS YOU CAN DELETE FILE FROM DATABASE FOR EXAMPLE
           res.end();
       });
+
+    // With Scope `projects` (look at example of configuration file)
+    app.get('/delete',  function(req, res) {
+      alleup.remove('1322506647.jpg', function(err) {
+
+          // THIS YOU CAN DELETE FILE FROM DATABASE FOR EXAMPLE
+          res.end();
+      }, 'projects'); 
     });
 
 3. **Get file url example:**

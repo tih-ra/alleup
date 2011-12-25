@@ -37,37 +37,37 @@ Example:
 
 Example config with scopes (only from version 0.1.0):
 
-	```javascript
-	{
-			"variants": {
-				"projects": { //projects is scope
-				  "resize": {
-					  "mini" : "300x200",
-					  "preview": "800x600"
-				  },
-				  "crop": {
-					 "thumb": "200x200"
-				  }
-				},
-				
-				"gallery": { //gallery is scope
-				   "crop": {
-					"thumb": "100x100"
-				   }	
-				}
+    ```javascript
+    {
+		"variants": {
+			"projects": { //projects is scope
+			  "resize": {
+				  "mini" : "300x200",
+				  "preview": "800x600"
+			  },
+			  "crop": {
+				 "thumb": "200x200"
+			  }
 			},
+			
+			"gallery": { //gallery is scope
+			   "crop": {
+				"thumb": "100x100"
+			   }	
+			}
+		},
 
-			"storage": {
-				"aws": {
-					"key" : "AWS_KEY",
-					"secret" : "AWS_SECRET",
-					"bucket" : "AWS_BUCKET"
-				},
-				"dir": {
-					"path" : "./public/images/" 
-				}
+		"storage": {
+			"aws": {
+				"key" : "AWS_KEY",
+				"secret" : "AWS_SECRET",
+				"bucket" : "AWS_BUCKET"
+			},
+			"dir": {
+				"path" : "./public/images/" 
 			}
 		}
+	}
 
 	
 2. **Now you can use Alleup**

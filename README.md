@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/tih-ra/alleup.png)](http://travis-ci.org/tih-ra/alleup)
 Alleup
 =============
 
